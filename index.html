@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+   <style>
+     body{
+       background-color: rgb(175, 111, 28);
+     }
+     input{
+      background-color: bisque;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-size: 2em;
+  
+     }
+     .class{
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       align-items: center;
+       margin-top: 50vh;
+     }
+     button{
+      background-color: black;
+    
+    border-radius: 10%;
+    padding: 0 22px;
+    font-size: 2em;
+    color: #e99292;
+    outline: none;
+     }
+   </style>
+</head>
+
+<body>
+    <div class="class">
+  
+    <input id="starnumber" type="number" class="input"><br><br>
+
+    <button onclick="fact()" >click here to get factorial of above number </button><br>
+    <p class="abcd">
+
+    </p>
+  </div>
+    <script>
+         function factorial(n) 
+        { 
+
+          if (n <= 1)
+            {
+              return 1;
+            }
+          return n * factorial(n-1);
+         
+       }
+       function fact(){
+    var input = document.querySelector(".input");
+    var res = document.querySelector(".abcd");
+    var result = factorial(input.value);
+    res.innerText = result;
+}
+
+    </script>
+</body>
+</html>
